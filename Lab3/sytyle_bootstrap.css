@@ -1,0 +1,42 @@
+.box1{
+    background-color: #ADD8E6;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.box2{
+    background-color: #2F4F4E;
+    padding-left: 0;
+}
+
+.nav-item > a{
+    font-size: 20px;
+    color: white;
+    padding: 15px;
+}
+a{
+    border-style: solid;
+    border-width: 0px 1px;
+    border-color: black;
+}
+
+.content1{
+    background-color: #AAAAAA;
+    height: 300px;
+}
+.content2{
+    background-color: #BBBBBB;
+    height: 300px;
+}
+.content3{
+    background-color: #CCCCCC;
+    height: 300px;
+}
+
+.footer{
+    background-color: #2F4F4E;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
