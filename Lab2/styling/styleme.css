@@ -29,3 +29,15 @@ iframe{
     width: 1000px;
     height: 345px ;
 }
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+p::first-letter {
+    font-size: 30px;
+}
