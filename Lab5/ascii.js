@@ -45,7 +45,7 @@ function onStop () {
 }
 function onCheck () {
     clearInterval(timer);
-    speed = document.getElementById("turbo").checked == true ?  50 : 2500;
+    speed = document.getElementById("turbo").checked == true ?  50 : 250;
     let start = Date.now(); 
     timer = setInterval(function() {
         let timePassed = Date.now() - start;
@@ -56,8 +56,8 @@ function onCheck () {
 }
 
 function fontSizeOnChange() {
-    let fontSize = document.getElementById("fontsize").value;
-    document.getElementById("text-area").style.fontSize = fontSize;
+    let font = document.getElementById("fontsize").value;
+    document.getElementById("text-area").style.fontSize = font;
 }
 window.onload = function() {
     let startButt = document.getElementById("start");
@@ -65,6 +65,6 @@ window.onload = function() {
     document.getElementById("stop").onclick = onStop;
     document.getElementById("animation").onchange = onChoose;
     document.getElementById("turbo").onchange = onCheck;
-    document.getElementById("fontsize").onchange = onFontSizeSelected;
+    document.getElementById("fontsize").onchange = fontSizeOnChange;
 
 }
