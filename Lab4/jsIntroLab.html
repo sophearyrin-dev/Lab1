@@ -35,14 +35,58 @@
         console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(55, maxOfThree(55, 4, 44)));
         console.log("Expected output of maxOfThree(55,4,44) is 55  " + myFunctionTest(4, maxOfThree(55, 4, 44)));
 
-        function isVowel(l){
+        function isVowel(l) {
             let n = l.toLowerCase();
-            if(n =='a' || n == 'i' || n=='o' || n== 'e' || n == 'u') return true;
+            if (n == 'a' || n == 'i' || n == 'o' || n == 'e' || n == 'u') return true;
             return false;
         }
         // console.log("convert A to lower case = " + 'A'.toLowerCase());
         console.log("Expected output of isVowel(a) is true " + myFunctionTest(true, isVowel('A')));
         console.log("Expected output of isVowel(d) is false " + myFunctionTest(true, isVowel('B')));
+
+        function sum(a) {
+            var s = 0;
+            for (var i = 0; i < a.length; i++) {
+                s = s + a[i];
+            }
+            return s;
+        }
+        console.log("Expected result of sum is 6 " + myFunctionTest(6, sum([1, 2, 3])));
+
+        function mutiply(a) {
+            var p = 1;
+            for (var i = 0; i < a.length; i++) {
+                p = p * a[i];
+            }
+            return p;
+        }
+        console.log("Expected result of multiply is 12 " + myFunctionTest(12, mutiply([1, 2, 3, 2])));
+
+        function reverse(a) {
+            console.log(a.split(""));
+            return a.split("").reverse().join("");
+        }
+        console.log("Expected result of reverse string olleH " + myFunctionTest("olleH", reverse("Hello")));
+
+        function findLongestWord(str) {
+            var longestWord = 0;
+            for (var i = 0; i < str.length; i++) {
+                if (str[i].length > longestWord) {
+                    longestWord = str[i].length;
+                }
+            }
+            return longestWord;
+        }
+        console.log("Expeceted of longest word is 3" , myFunctionTest(3, findLongestWord(["a","bb","ccc"])));
+
+        function filterLongWords(arr, i){
+            return arr.filter(x => x.length> i);
+        }
+        console.log(filterLongWords(["aa","ccc","bb","ddddd"],2));
+
+        fun
+
+
     </script>
 </head>
 

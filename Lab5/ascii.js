@@ -1,10 +1,8 @@
-
 let timer = null;
 let content = "";
 let speed = 250;
 let i;
 let args;
-
 
 function onStart () {
 

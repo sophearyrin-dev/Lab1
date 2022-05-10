@@ -15,9 +15,6 @@
         let assert = chai.assert;
 
         </script>
-        <script>
-
-        </script>
         <script src="code.js"></script>
         <script>
             //4 Define a function sum() and a function multiply() that sums and 
@@ -36,6 +33,7 @@
                 returns the array of words that are longer than i. */
             function filterLongWords(arr,i) {
                 return arr.filter(e => e.length > i);
+                
             }
    
             describe("sum", () => {
@@ -52,6 +50,7 @@
                 });
                 it("given array of words and an integer i and returns the array of words that are longer than i",
                     () => {
+                        //array, object,
                         assert.deepEqual(filterLongWords(["aa","bbb","cccc"],2),["bbb","cccc"]);
                 });
             });

@@ -10,85 +10,55 @@
 
 // Lastly change the global variable name that will hold this object from add to count.
 
-const add = (function () {
-
-    var counter = 0;
-
-    function add() {
-
-        return counter += 1;
-
+const add =(function(){
+    var counter =0;
+    function add(){
+        counter = counter +1;
     }
-
-    function reset() {
-
-        counter = 0;
-
+    function reset(){
+        counter =0;
     }
-
-    return { add, reset }
-
+    return {
+        add : add,
+        reset: reset
+    }
 })();
 
-
-
 // 2. In the definition of the add() function in the code for the question 1, identify the “free”
-
 // variable. Also write down a definition of what “free” variables are.
-
-
-
 //answer : counter is a free variable. A free variable is simply a variable which is not declared inside a given function,
-
 // but is used inside it.
 
 
-
 // 3. The add() function in question 1 always adds 1 to the counter each time it is called. Write a
-
 // make_adder(inc) function whose return value is an add function with increment value of
-
 // inc instead of 1. In other words your function should be able to do the following:
 
-
-
 const add2 = (function () {
-
     var counter = 0;
-
-    function add() {
-
-        return counter += 1;
-
+    function add(){
+        counter = counter +1;
     }
-
-    function make_adder(inc) {
-
-        return function add() {
-
-            return counter += inc;
-
+    function make_adder(inc){
+        return function add(){
+            return counter = counter +inc;
         }
-
     }
-
-    function reset() {
-
+    function reset(){
         counter = 0;
-
     }
-
-    return { add, reset, make_adder }
-
+    return {
+        add : add,
+        make_adder : make_adder,
+        reset : reset
+    }
 })();
 
-
-
 var add5 = add2.make_adder(5);
-
-add5(); add5();
-
+add5();
+add5();
 console.log(add5());
+
 
 // 4. Suppose you are given a file of JavaScript code containing a list of many function and variable
 
@@ -126,57 +96,40 @@ console.log(add5());
 
 // Public method: incrementAge() // uses private getAge()
 
-
-
-var employee = (function () {
-
-    var name = "dan";
-
-    var age = "31";
-
-    var salary = "14000";
-
-    function getName() { return name }
-
-    function getAge() { return age }
-
-    function getSalary() {
-
+const employee = (function (){
+    var name = "pheary";
+    var age ="21";
+    var salary =1000;
+    function getName(){
+        return name;
+    }
+    function getAge(){
+        return age;
+    }
+    function getSalary(){
         return salary;
-
     }
-
-    function setName(name) { name }
-
-    function setAge(age) { age }
-
-    function setSalary(salary) {
-
+    //public function
+    function setName(name){
+        name = name;
+    }
+    function setAge(age){
+        age = age;
+    }
+    function setSalary(salary){
         salary = salary;
-
     }
 
-    function increaseSalary(percentage) {
-
-        salary += getSalary() * percentage / 100;
-
+    function increaseSalary(percentage){
+        salary = getSalary() * percentage/100;
     }
-
-    function incrementAge(age) {
-
+    function incrementAge(age){
         age = getAge() + age;
-
     }
-
     return {
-
         setName, setAge, setSalary, increaseSalary, incrementAge
-
     };
-
 })();
-
-
 
 // 6. Write a few JavaScript instruction to make a Module extension to the module made in the
 
@@ -186,32 +139,20 @@ var employee = (function () {
 
 // setAddress(address) and getAddress()
 
-employee.address = "";
-
-employee.setAddress = function (address) {
-
+employee.address ="";
+employee.setAddress = function (address){
     this.address = address;
-
-};
-
-employee.getAddress = function () {
-
+}
+employee.getAddress = function(){
     return this.address;
+}
 
-};
-
-employee.setAddress("Fairfield, IA, 55257, 1000North");
-
+employee.setAddress("Fairfield, IA, 55257, 1000North")
 console.log(employee.getAddress());
-
-
-
 
 7.//Modify the jsFiddle at: https://jsfiddle.net/TinaXing/oofzum89/ so that the example works
 
 //with call. Then modify it again to work with bind.
-
-
 
 var me = {
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        x =1;
+        var a= 5;
+        var b =10;
+        var c = function(a, b, c){
+            console.log('1 :' ,x); //hosting from local variable x =10, so it is undefined
+            console.log('2 : ',a); // from arugement of function a = 8
+            var f = function(a, b, c){
+                b = a; // b= 8
+                console.log('3 :', b); // b = 8
+                b = c; //b = 10
+                var x = 5;
+            }
+            f(a,b,c); // calling annonymous funtion f
+            console.log('4 : ',b); // b= 9, why? it should be = 10 becuae we modifed it in f function
+            var x =10;
+        }
+        c(8,9,10);
+        console.log('5 : ' , b); // b = 10 from global scope
+        console.log('6 : ', x); // x= 1 from global scope
+    </script>
+</body>
+</html>
