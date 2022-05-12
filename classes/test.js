@@ -13,6 +13,8 @@ function tester() {
             bank.addAccount(614144);
             bank.endOfMonth();
 
+            console.log(savingsAccount.getBalance());
+
     describe("account class methods test",() =>{
         it("test getBalance methods should return the current balance",
           () => {
@@ -35,6 +37,9 @@ function tester() {
           () => {
             assert.equal(account.endOfMonth(),"");
         });
+        it("test get account nubmer of saving accoutn", ()=> {
+          assert.equal(savingsAccount.getNumber(), 614243)
+        })
         it("method which deposits the interest amount into the account",
           () => {
             assert.equal(savingsAccount.getBalance(),110);
