@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./screenCode.js"></script>
+    <link rel="stylesheet" href="./screen.css" />
+  </head>
+  <body>
+    <div id="inputs">
+      <div>
+        <label for="circleWidth">Width</label><br>
+        <input type="number" name="circleWidth" id="circleWidth" value="50" min="50" />
+      </div>
+      <div>
+        <label for="growthAmount">Growth Amount</label><br>
+        <input type="number" name="growthAmount" id="growthAmount" value="1" min="1" />
+      </div>
+      <div>
+        <label for="interval">Interval</label><br>
+        <input type="number" name="interval" id="interval" value="5000" min="5000" />
+      </div>
+      <div>
+        <label for="numberOfCircles">Number of Circles</label><br>
+        <input type="number" name="numberOfCircles" id="numberOfCircles" value="1" min="1" />
+      </div><br>
+      <div>
+        <input type="submit" value="Start" id="submitButton" />
+      </div>
+    </div>
+    <div id="circleContainer">
+        <div id="div0"></div>
+    </div>
+  </body>
+</html>

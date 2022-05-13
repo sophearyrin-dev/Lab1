@@ -1,13 +1,13 @@
-#circle {
-    background: lightblue;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+.controlpanel{
+    position: relative;
+    margin-top: 25%;
 }
 
-.center {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+input[type=button]{
+    background-color: navy;
+    color: white;
+}
+.circle-holder{
+  padding: 1% 5%;
+ 
   }
