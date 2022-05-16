@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-   <h1>Online shop</h1>
+   <%- include("header.ejs")%>
    <%
         for (let i of pro){
             %>
-                <p><%=i.id%>, <%=i.name%>, <%=i.price%></p>
+                <h3><%=i.id%>, <%=i.name%>, <%=i.price%></h3>
                 <div class="pic">
                     <img src="<%=i.source%>" alt="">
                 </div>
@@ -22,4 +22,7 @@
     %>
 
 </body>
+<footer>
+    <%- include("footer.ejs")%>
+</footer>
 </html>
