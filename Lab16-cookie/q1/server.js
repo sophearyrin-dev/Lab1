@@ -38,11 +38,7 @@ app.post('/result', (req, res)=>{
         infoValue : info,
         titlepage : 'My Info'
     })
-
-
 })
-
-
 app.listen(3000, () => {
     //all of your code are here, this is what will happen in server
     console.log('Running server on port : 3000 .....');
