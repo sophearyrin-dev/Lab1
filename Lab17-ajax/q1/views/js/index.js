@@ -17,6 +17,7 @@ $(() => {
             fname: $("#fname").val(),
             lname: $("#lname").val(),
             food: $("#food").val(),
+            time: $("input[type=time]").val()
         };
         $.post({
             url: "/add",
